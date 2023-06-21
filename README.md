@@ -25,15 +25,18 @@ launch EC2
 Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory.
 We will leave this configuration as is and will add our own directory next next to the default one.
 
-Create the directory for projectlamp using ‘mkdir’ command as follows:
+Create the directory for lamp_stack using ‘mkdir’ command as follows:
 
 sudo mkdir /var/www/lamp_stack
+
 Next, assign ownership of the directory with your current system user:
 
  sudo chown -R $USER:$USER /var/www/lamp_stack
+ 
 Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor. Here, we’ll be using vi or vim (They are the same by the way):
 
 sudo vi /etc/apache2/sites-available/lamp_stack.conf
+
 This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
 
 <VirtualHost *:80>
@@ -54,26 +57,33 @@ Hit ENTER to save the file
 You can use the ls command to show the new file in the sites-available directory
 
 sudo ls /etc/apache2/sites-available
+
 You will see something like this;
 
 000-default.conf  default-ssl.conf  projectlamp.conf
-With this VirtualHost configuration, we’re telling Apache to serve projectlamp using /var/www/projectlampl as its web root directory. If you would like to test Apache without a domain name, you can remove or comment out the options ServerName and ServerAlias by adding a # character in the beginning of each option’s lines. Adding the # character there will tell the program to skip processing the instructions on those lines.
+
+With this VirtualHost configuration, we’re telling Apache to serve lamp_stack using /var/www/lamp_stack as its web root directory. If you would like to test Apache without a domain name, you can remove or comment out the options ServerName and ServerAlias by adding a # character in the beginning of each option’s lines. Adding the # character there will tell the program to skip processing the instructions on those lines.
 
 You can now use a2ensite command to enable the new virtual host:
 
-sudo a2ensite projectlamp
+sudo a2ensite lamp_stack
+
 You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
 
 sudo a2dissite 000-default
+
 To make sure your configuration file doesn’t contain syntax errors, run:
 
 sudo apache2ctl configtest
+
 Finally, reload Apache so these changes take effect:
 
 sudo systemctl reload apache2
-Your new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
 
-sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+Your new website is now active, but the web root /var/www/lamp_stack is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
+
+sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/lamp_stack/index.html
+
 Now go to your browser and try to open your website URL using IP address:
 
 http://<Public-IP-Address>:80
