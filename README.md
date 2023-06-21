@@ -91,6 +91,8 @@ To make sure your configuration file doesn’t contain syntax errors, run:
 
 sudo apache2ctl configtest
 
+<img width="822" alt="Screenshot 2023-06-21 at 18 00 45" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/114ba68a-09f9-49ea-822d-3d8837cab7e0">
+
 Finally, reload Apache so these changes take effect:
 
 sudo systemctl reload apache2
