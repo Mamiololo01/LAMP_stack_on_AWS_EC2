@@ -11,18 +11,8 @@ LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
 MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
 MEAN (MongoDB, ExpressJS, AngularJS, NodeJS
 
-Step 0 – Preparing prerequisites
+Preparing prerequisites
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
-
-AWS is the biggest Cloud Service Provider and it offers a free tier account that we are going to leverage for our projects.
-
-Do not focus too much on AWS itself right now, there will be a proper Cloud introduction and configuration projects later in our course.
-
-Right now, all we need to know is that AWS can provide us with a free virtual server called EC2 (Elastic Compute Cloud) for our needs.
-
-Spinning up a new EC2 instance (an instance of a virtual server) is only a matter of a few clicks.
-
-You can either Watch the videos below to get yourself set up.
 
 AWS account setup and Provisioning an Ubuntu Server
 Connecting to your EC2 Instance
@@ -37,23 +27,24 @@ We will leave this configuration as is and will add our own directory next next 
 
 Create the directory for projectlamp using ‘mkdir’ command as follows:
 
-sudo mkdir /var/www/projectlamp
+sudo mkdir /var/www/lamp_stack
 Next, assign ownership of the directory with your current system user:
 
- sudo chown -R $USER:$USER /var/www/projectlamp
+ sudo chown -R $USER:$USER /var/www/lamp_stack
 Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor. Here, we’ll be using vi or vim (They are the same by the way):
 
-sudo vi /etc/apache2/sites-available/projectlamp.conf
+sudo vi /etc/apache2/sites-available/lamp_stack.conf
 This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
 
 <VirtualHost *:80>
-    ServerName projectlamp
-    ServerAlias www.projectlamp 
+    ServerName lamp_stack
+    ServerAlias www.lamp_stack 
     ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/projectlamp
+    DocumentRoot /var/www/lamp_stack
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+
 To save and close the file, simply follow the steps below:
 
 Hit the esc button on the keyboard
