@@ -79,9 +79,13 @@ You can now use a2ensite command to enable the new virtual host:
 
 sudo a2ensite lamp_stack
 
+<img width="750" alt="Screenshot 2023-06-21 at 17 57 33" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/53021d8b-7646-4371-a00d-f3f6786db73f">
+
 You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
 
 sudo a2dissite 000-default
+
+<img width="725" alt="Screenshot 2023-06-21 at 17 59 12" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/fa66b4ab-803c-4a83-9aed-c7e5d8e760ac">
 
 To make sure your configuration file doesn’t contain syntax errors, run:
 
