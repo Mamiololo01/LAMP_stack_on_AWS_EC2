@@ -57,14 +57,21 @@ To save and close the file, simply follow the steps below:
 Hit the esc button on the keyboard
 Type :
 Type wq. w for write and q for quit
+
 Hit ENTER to save the file
+
 You can use the ls command to show the new file in the sites-available directory
+
+<img width="826" alt="Screenshot 2023-06-21 at 17 54 21" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/c2d8a260-7302-4cbd-be54-0b5786f91468">
 
 sudo ls /etc/apache2/sites-available
 
 You will see something like this;
 
 000-default.conf  default-ssl.conf  projectlamp.conf
+
+
+<img width="817" alt="Screenshot 2023-06-21 at 17 55 23" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/24ae4bed-9dba-4113-9972-704912490100">
 
 With this VirtualHost configuration, we’re telling Apache to serve lamp_stack using /var/www/lamp_stack as its web root directory. If you would like to test Apache without a domain name, you can remove or comment out the options ServerName and ServerAlias by adding a # character in the beginning of each option’s lines. Adding the # character there will tell the program to skip processing the instructions on those lines.
 
