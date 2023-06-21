@@ -29,9 +29,13 @@ Create the directory for lamp_stack using ‘mkdir’ command as follows:
 
 sudo mkdir /var/www/lamp_stack
 
+<img width="789" alt="Screenshot 2023-06-21 at 17 51 27" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/571db63a-aa43-4b0c-a432-4f5e91abbd20">
+
 Next, assign ownership of the directory with your current system user:
 
- sudo chown -R $USER:$USER /var/www/lamp_stack
+sudo chown -R $USER:$USER /var/www/lamp_stack
+
+<img width="813" alt="Screenshot 2023-06-21 at 17 53 09" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/7bb95b91-f0dc-4366-b227-67574c51baf3">
  
 Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor. Here, we’ll be using vi or vim (They are the same by the way):
 
