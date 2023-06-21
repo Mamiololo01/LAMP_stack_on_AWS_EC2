@@ -1,4 +1,4 @@
-# lamp_stack_on_AWS_EC2
+# LAMP_stack_on_AWS_EC2
 LAMP STACK IN AWS
 
 What is a Technology stack?
