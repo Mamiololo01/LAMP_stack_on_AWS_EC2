@@ -68,7 +68,7 @@ sudo ls /etc/apache2/sites-available
 
 You will see something like this;
 
-000-default.conf  default-ssl.conf  projectlamp.conf
+000-default.conf  default-ssl.conf  lamp_stack.conf
 
 
 <img width="817" alt="Screenshot 2023-06-21 at 17 55 23" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/24ae4bed-9dba-4113-9972-704912490100">
