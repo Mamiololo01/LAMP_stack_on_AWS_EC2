@@ -102,7 +102,13 @@ sudo systemctl reload apache2
 
 Your new website is now active, but the web root /var/www/lamp_stack is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
 
+
+<img width="789" alt="Screenshot 2023-06-21 at 18 25 26" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/3ce68666-68a6-46c1-8577-0cb72e910b4b">
+
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/lamp_stack/index.html
+
+<img width="801" alt="Screenshot 2023-06-21 at 18 26 40" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/2160d9f6-29b2-4adf-b5da-2961d35474b6">
+
 
 Now go to your browser and try to open your website URL using IP address:
 
