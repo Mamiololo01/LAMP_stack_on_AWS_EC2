@@ -282,16 +282,5 @@ Copyright (c) The PHP Group
 Zend Engine v3.4.0, Copyright (c) Zend Technologies
 At this point, your LAMP stack is completely installed and fully operational.
 
-Linux (Ubuntu)
-
-Apache HTTP Server
-
-MySQL
-
-PHP
-
-To test your setup with a PHP script, it’s best to set up a proper Apache Virtual Host to hold your website’s files and folders. Virtual host allows you to have multiple websites located on a single machine and users of the websites will not even notice it.
-
-We will configure our first Virtual Host in the next step.
 
 
