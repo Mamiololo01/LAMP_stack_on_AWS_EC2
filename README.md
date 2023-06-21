@@ -110,6 +110,8 @@ sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/met
 <img width="801" alt="Screenshot 2023-06-21 at 18 26 40" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/2160d9f6-29b2-4adf-b5da-2961d35474b6">
 
 
+<img width="790" alt="Screenshot 2023-06-21 at 18 27 08" src="https://github.com/Mamiololo01/lamp_stack_on_AWS_EC2/assets/67044030/1f723d2c-bcbb-44cb-8e73-ab2fb5c31078">
+
 Now go to your browser and try to open your website URL using IP address:
 
 http://Public-IP-Address:80
