@@ -1,10 +1,8 @@
 # LAMP_stack_on_AWS_EC2
 LAMP STACK IN AWS
 
-What is a Technology stack?
 A technology stack is a set of frameworks and tools used to develop a software product. This set of frameworks and tools are very specifically 
 hosen to work together in creating a well-functioning software. They are acronymns for individual technologies used together for a specific technology product. 
-some examples are…
 
 LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
 
@@ -18,8 +16,11 @@ Preparing prerequisites
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
 
 AWS account setup and Provisioning an Ubuntu Server
+
 Connecting to your EC2 Instance
+
 Register a new AWS account following this instruction.
+
 Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
 launch EC2
 
